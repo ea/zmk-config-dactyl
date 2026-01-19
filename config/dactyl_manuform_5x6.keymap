@@ -21,13 +21,13 @@
                 &kp GRAVE &kp A  &kp S  &kp D  &kp F  &kp G  &kp HOME       &kp END &kp H   &kp J   &kp K    &kp L     &kp SEMI  &kp APOS
                 &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                         &kp N   &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp LA(SPACE)
                 &kp LGUI  &kp LCTRL &kp LALT &mo ADJ  &mo RSE &kp SPACE     &kp BSPC    &kp RET  &kp LEFT &kp UP &kp DOWN &kp RIGHT
-                               &kp ENTER  &kp LCTRL  &kp ENTER &kp GRAVE    &kp END  &kp DEL &kp LGUI &kp LALT
+                               &mo ADJ  &kp LCTRL  &kp ENTER &kp LCTRL    &kp PG_DN  &kp DEL &kp PG_UP &mo ADJ
             >;
         };
 
         lower_layer {
             bindings = <
-                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &trans        &trans &kp F6 &kp F7   &kp F8   &kp F9 &kp F10   &kp F11
+                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &kp F6        &kp F7 &kp F8 &kp F9   &kp F10   &kp F11 &kp F12 &trans
                 &trans  &trans &trans &trans &trans &trans  &trans        &trans &trans &trans   &kp UP   &trans &trans    &trans
                 &trans  &trans &trans &trans &trans &trans  &trans        &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
                 &trans  &trans &trans &trans &trans &trans                       &trans &trans   &trans   &trans &trans    &trans
