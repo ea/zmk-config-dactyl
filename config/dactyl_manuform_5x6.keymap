@@ -16,52 +16,47 @@
 
         default_layer {
             bindings = <
-                &kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6    &kp N7 &kp N8   &kp N9  &kp N0   &kp MINUS &kp EQUAL &kp DEL
-                &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp T     &kp T  &kp Y    &kp U   &kp I    &kp O     &kp P     &kp FSLH
-                &kp GRAVE &kp A  &kp S  &kp D  &kp F  &kp G  &kp HOME  &kp END &kp H   &kp J   &kp K    &kp L     &kp SEMI  &kp GRAVE
-                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                    &kp N   &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp BSLH
-                &kp LGUI  &kp LCTRL &kp LALT &mo ADJ  &mo RSE &kp SPACE                  &kp BSPC       &kp RET  &mo ADJ &mo LWR  &kp PLUS &kp PLUS 
-                                   &kp ENTER  &kp LCTRL  &kp ENTER &kp GRAVE              &kp END  &kp DEL &kp LGUI &kp LALT
+                &kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6         &kp N7 &kp N8   &kp N9  &kp N0   &kp MINUS &kp EQUAL &kp DEL
+                &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp LBKT       &kp RBKT &kp Y    &kp U   &kp I    &kp O     &kp P     &kp BSLH
+                &kp GRAVE &kp A  &kp S  &kp D  &kp F  &kp G  &kp HOME       &kp END &kp H   &kp J   &kp K    &kp L     &kp SEMI  &kp APOS
+                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                         &kp N   &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp LA(SPACE)
+                &kp LGUI  &kp LCTRL &kp LALT &mo ADJ  &mo RSE &kp SPACE     &kp BSPC    &kp RET  &kp LEFT &kp UP &kp DOWN &kp RIGHT
+                               &kp ENTER  &kp LCTRL  &kp ENTER &kp GRAVE    &kp END  &kp DEL &kp LGUI &kp LALT
             >;
         };
 
         lower_layer {
             bindings = <
-                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                &kp F6 &kp F7   &kp F8   &kp F9 &kp F10   &kp F11
-                &trans  &trans &trans &trans &trans &trans                &trans &trans   &trans   &trans &trans    &trans
-                &trans  &trans &trans &trans &trans &trans                &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-                &trans  &trans &trans &trans &trans &trans                &trans &trans   &trans   &trans &trans    &trans
-                               &trans &trans                                              &trans &trans
-                                             &trans &trans                &trans &mo ADJ
-                                             &trans &trans                &trans &trans
-                                             &trans &trans                &trans &trans
+                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &trans        &trans &kp F6 &kp F7   &kp F8   &kp F9 &kp F10   &kp F11
+                &trans  &trans &trans &trans &trans &trans  &trans        &trans &trans &trans   &kp UP   &trans &trans    &trans
+                &trans  &trans &trans &trans &trans &trans  &trans        &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+                &trans  &trans &trans &trans &trans &trans                       &trans &trans   &trans   &trans &trans    &trans
+                &trans  &trans &trans &trans &trans &trans                       &trans &trans   &trans   &trans &trans    &trans
+                               &trans &trans &trans &trans                &trans &mo ADJ &trans  &trans
+
             >;
         };
 
         raise_layer {
             bindings = <
-                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                &kp F6 &kp F7   &kp F8   &kp F9 &kp F10   &kp F11
-                &trans  &trans &trans &trans &trans &trans                &trans &trans   &kp LNLCK &kp INS &kp SLCK &kp K_MUTE
-                &trans  &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp LBKT       &kp RBKT &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp K_VOL_UP
-                &trans  &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &kp K_VOL_DN
-                               &trans &trans                                            &trans &trans
-                                             &mo ADJ &trans               &trans &trans
-                                             &trans  &trans               &trans &trans
-                                             &trans  &trans               &trans &trans
+                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &trans        &trans &kp F6 &kp F7   &kp F8   &kp F9 &kp F10   &kp F11
+                &trans  &trans &trans &trans &trans &trans  &trans        &trans &trans &trans   &kp UP   &trans &trans    &trans
+                &trans  &trans &trans &trans &trans &trans  &trans        &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+                &trans  &trans &trans &trans &trans &trans                       &trans &trans   &trans   &trans &trans    &trans
+                &trans  &trans &trans &trans &trans &trans                       &trans &trans   &trans   &trans &trans    &trans
+                               &trans &trans &trans &trans                &trans &mo ADJ &trans  &trans
             >;
         };
 
         adjust_layer {
             bindings = <
                 &bootloader &bt BT_SEL 0 &out OUT_BLE &none &none &none &none        &none &none &none &none &none &none &bootloader
-                &none &bt BT_SEL 1 &out OUT_USB &none &none &none         &none &none &none &none &none &none
-                &none &bt BT_SEL 2 &none        &none &none &none         &none &none &none &none &none &none
-                &none &bt BT_SEL 3 &bt BT_CLR   &none &none &none         &none &none &none &none &none &none
-                                   &none        &none                                 &none &none
-                                                      &none &none             &none &none
-                                                      &none &none             &none &none
-                                                      &none &none             &none &none
+                &none       &bt BT_SEL 1 &out OUT_USB &none &none &none &none        &none &none &none &none &none &none &none
+                &none       &bt BT_SEL 2 &none        &none &none &none &none        &none &none &none &none &none &none &none
+                &none       &bt BT_SEL 3 &bt BT_CLR   &none &none &none                    &none &none &none &none &none &none
+                &none       &none        &none        &none &none &none                    &none &none &none &none &none &none
+                            &none        &none        &none &none                          &none &none &none &none
             >;
         };
     };
-};
+}
