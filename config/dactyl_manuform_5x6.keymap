@@ -21,7 +21,7 @@
                 &kp GRAVE &kp A  &kp S  &kp D  &kp F  &kp G  &kp HOME       &kp END &kp H   &kp J   &kp K    &kp L     &kp SEMI  &kp APOS
                 &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                         &kp N   &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp LA(SPACE)
                 &kp LGUI  &kp LCTRL &kp LALT &mo ADJ  &mo RSE &kp SPACE     &kp BSPC    &kp RET  &kp LEFT &kp UP &kp DOWN &kp RIGHT
-                               &mo ADJ  &kp LCTRL  &kp ENTER &kp LCTRL    &kp PG_DN  &kp DEL &kp PG_UP &mo ADJ
+                               &mo ADJ  &kp LCTRL  &kp ENTER &kp LCTRL    &kp PG_UP   &kp DEL  &kp PG_DN &mo ADJ
             >;
         };
 
