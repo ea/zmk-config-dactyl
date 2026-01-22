@@ -10,18 +10,38 @@
 
 
 
+
 / {
+
+    behaviors {
+        td_esc: td_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_ESC";
+            tapping-term-ms = <170>;
+            #binding-cells = <0>;
+            bindings =  <&kp ESCAPE>, <&kp LC(C)>;
+        };
+        skq: sticky_key_quick_release {
+        compatible = "zmk,behavior-sticky-key";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <1000>;
+        quick-release;
+        ignore-modifiers;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6         &kp N7 &kp N8   &kp N9  &kp N0   &kp MINUS &kp EQUAL &kp DEL
+                &td_esc   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6         &kp N7 &kp N8   &kp N9  &kp N0   &kp MINUS &kp EQUAL &kp DEL
                 &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp LBKT       &kp RBKT &kp Y    &kp U   &kp I    &kp O     &kp P     &kp BSLH
                 &kp GRAVE &kp A  &kp S  &kp D  &kp F  &kp G  &kp HOME       &kp END &kp H   &kp J   &kp K    &kp L     &kp SEMI  &kp APOS
-                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                         &kp N   &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp LA(SPACE)
+                &skq LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                         &kp N   &kp M   &kp COMMA &kp DOT  &kp FSLH  &kp LA(SPACE)
                 &kp LGUI  &kp LCTRL &kp LALT &mo ADJ  &mo RSE &kp SPACE     &kp BSPC    &kp RET  &kp LEFT &kp UP &kp DOWN &kp RIGHT
-                               &mo ADJ  &kp LCTRL  &kp ENTER &kp LCTRL    &kp PG_UP   &kp DEL  &kp PG_DN &mo ADJ
+                               &mo ADJ  &kp LCTRL  &skq LSHFT &kp LCTRL    &kp PG_UP   &skq LSHFT  &kp PG_DN &mo ADJ
             >;
         };
 
